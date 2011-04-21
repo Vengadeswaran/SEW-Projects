@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7;charset=utf-8" >
+<!--<meta http-equiv="Content-Type" content="IE=EmulateIE7;charset=utf-8;">-->
+<title>Some awesome title</title>
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/reset.css" media="screen, projection">
+<link rel="stylesheet" href="css/site.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="js/jquery.jqplot.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.treeTable.css"/>
+    
+<!-- Javascript -->
+<!--[if IE]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->    
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.treeTable.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.jqplot.js"></script>
+<script type="text/javascript" language="javascript" src="js/plugins/jqplot.cursor.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.dateAxisRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.barRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.pointLabels.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.highlighter.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.donutRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/plugins/jqplot.pointLabels.min.js"></script>
+</head>
+<body>
+	<!--Header-->
+	<div class="header-container">
+		<img alt="" src="images/logo.png">
+	</div>
+	<div class="nav-container">
+		<div class="top-nav">
+			<ul class="nav">
+				<li class="selected"><a href="#">Dashboard</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Users</a></li>
+				<li><a href="#">Administration</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--Body-->
+	<div class="header-container">
+		<div class="project-select">
+				<p class="project-name">230 MW Thermal Power Plant</p>
+				<span class="project-location">Sikkim <img alt="" src="images/project-dropdown-arrow.png"/></span>
+		</div>
+		<!--
+		<div class="project-select">
+			<ul>
+				<li>Project Name</li>
+				<li>Project Name</li>
+				<li>Project Name</li>
+				<li>Project Name</li>
+				<li>Project Name</li>
+				<li>Project Name</li>
+				<li>Project Name</li>
+			</ul>
+		</div>
+		-->
+	</div>
+	<div class="container">
+		<h1>Project Dashboard <span class="menu-button"><a href="#" class="small blue gradient-button">Filter</a></span></h1>
+		<div class="filter-container">
+			<form action="" method="">
+				<label>Date Range
+				    <input type="text" value="Sample">
+				    <input type="text" value="Sample">
+                </label>
+			</form>
+		</div>
+		<div class="report-container-2by3">
+			<h2>Contract Confidence</h2>
+			<div id="chart-1" style="margin:10px 30px 40px 10px;"></div>
+		</div>
+        <div class="report-container-1by3">
+            <span class="report-container-title">
+                Key Data Aug-10
+            </span>
+            <span class="report-container-subtitle">
+                Budget Confidence Index
+            </span>
+            <span class="report-container-value">
+                1.2
+            </span>
+            <span class="report-container-subtitle">
+                Re Estimate Index
+            </span>
+            <span class="report-container-value">
+                -2.1
+            </span>
+        </div>
+        <div class="report-container-2by3">
+            <h2>Estimate Confidence</h2>
+            <div id="chart-2" style="margin:10px 30px 40px 10px;"></div>
+        </div>
+        <div class="report-container-1by3">
+            <span class="report-container-title">
+                Key Data Aug-10
+            </span>
+            <span class="report-container-subtitle">
+                Planned Value
+            </span>
+            <span class="report-container-value">
+                412.0 Cr.
+            </span>
+            <span class="report-container-subtitle">
+                LRE Site
+            </span>
+            <span class="report-container-value">
+                318.6 Cr.
+            </span>
+            <span class="report-container-subtitle">
+                LRE PMC
+            </span>
+            <span class="report-container-value">
+                304.0 Cr.
+            </span>
+        </div>
+        <div class="report-container-2by3">
+            <h2>Cost Vs Schedule Performance</h2>
+            <div id="chart-3" style="margin:10px 30px 40px 10px;"></div>
+        </div>
+        <div class="report-container-1by3">
+            <span class="report-container-title">
+                Key Data Aug-10
+            </span>
+            <span class="report-container-subtitle">
+                Cost Performance Index
+            </span>
+            <span class="report-container-value">
+                1.04
+            </span>
+            <span class="report-container-subtitle">
+                Schedule Performance Index
+            </span>
+            <span class="report-container-value">
+                0.65
+            </span>
+        </div>
+        <div class="report-container-2by3">
+            <h2>Normalized Resource Dashboard</h2>
+            <div>
+                <table class="tablesorter">
+                  <thead>
+                    <tr style="height:30px; padding:15px 0 10px 0;">
+                      <th>
+                        Resource Name
+                      </th>
+                      <th>
+                        Cumulative Rate
+                      </th>
+                      <th>
+                        % Productivity Rate
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="node-1">
+                      <td>
+                        Choo
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="child-of-node-1">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr id="node-2">
+                      <td>
+                        Ruban
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="child-of-node-2">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr id="node-3">
+                      <td>
+                        Venky
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr class="child-of-node-3">
+                      <td>
+                        Project 1
+                      </td>
+                      <td>
+                        9
+                      </td>
+                      <td>
+                        22.5%
+                      </td>
+                    </tr>
+                    <tr class="child-of-node-3">
+                      <td>
+                        Project 2
+                      </td>
+                      <td>
+                        10
+                      </td>
+                      <td>
+                        25.0%
+                      </td>
+                    </tr>
+                    <tr class="child-of-node-3">
+                      <td>
+                        Project 3
+                      </td>
+                      <td>
+                        7
+                      </td>
+                      <td>
+                        17.5%
+                      </td>
+                    </tr>
+                    <tr class="child-of-node-3">
+                      <td>
+                        Project 4
+                      </td>
+                      <td>
+                        9
+                      </td>
+                      <td>
+                        22.5%
+                      </td>
+                    </tr>
+                    <tr class="child-of-node-3">
+                      <td>
+                        Meeting
+                      </td>
+                      <td>
+                        9
+                      </td>
+                      <td>
+                        22.5%
+                      </td>
+                    </tr>
+                    <tr class="child-of-node-3">
+                      <td>
+                        Administrative
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        5.0%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+		<div class="clearfix"></div>
+	</div>
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+  $(".tablesorter").treeTable();
+  $(".tablesorter").tablesorter({widgets: ['zebra']});
+});
+    $.jqplot.config.enablePlugins = true;
+    s1 = [['2008-Jan-1',-10],['2008-Feb-1',-10],['2008-Mar-1',-10],['2008-Apr-1',-10],['2008-May-1',-9.39139372095375],['2008-Jun-1',-9.12178038658878],['2008-Jul-1',-8.9654436090182],['2008-Aug-1',-8.81173987280136],['2008-Sep-1',-8.4970485298599],['2008-Oct-1',-8.09736687155957],['2008-Nov-1',-7.74207847633126],['2008-Dec-1',-7.33894771842576],['2009-Jan-1',-6.79759838129922],['2009-Feb-1',-6.24469362869022],['2009-Mar-1',-5.73800585919557],['2009-Apr-1',-5.17660040332034],['2009-May-1',-4.56394403203491],['2009-Jun-1',-4.02734656496862],['2009-Jul-1',-3.62124346712104],['2009-Aug-1',-3.20535759969329],['2009-Sep-1',-2.63888956901751],['2009-Oct-1',-2.10090317184642],['2009-Nov-1',-1.55208896554175],['2009-Dec-1',-0.999569585160236],['2010-Jan-1',-0.560741444671954],['2010-Feb-1',-0.158948882804185],['2010-Mar-1',0],['2010-Apr-1',0.59986406666946],['2010-May-1',0.657013860257363],['2010-Jun-1',0.860936257668579],['2010-Jul-1',1.08256784906879],['2010-Aug-1',1.18230951340176]];
+    s2 = [['2008-Jan-1',-10],['2008-Feb-1',-10],['2008-Mar-1',-10],['2008-Apr-1',-10],['2008-May-1',-9.39145625014893],['2008-Jun-1',-9.12205538011495],['2008-Jul-1',-8.96631856212956],['2008-Aug-1',-8.81365019137898],['2008-Sep-1',-8.50092509064918],['2008-Oct-1',-8.10574565365281],['2008-Nov-1',-7.75715473693551],['2008-Dec-1',-7.36310843177738],['2009-Jan-1',-6.84954194145615],['2009-Feb-1',-6.3333706200963],['2009-Mar-1',-5.89114900157352],['2009-Apr-1',-5.41881048012146],['2009-May-1',-4.92578961702876],['2009-Jun-1',-4.5283861550321],['2009-Jul-1',-4.26799617122682],['2009-Aug-1',-4.0364168223117],['2009-Sep-1',-3.7277795841263],['2009-Oct-1',-3.47360144959652],['2009-Nov-1',-3.19124660882764],['2009-Dec-1',-2.95550323027265],['2010-Jan-1',-2.82438103555259],['2010-Feb-1',-2.74526842636265],['2010-Mar-1',-2.76631987442481],['2010-Apr-1',-2.4758043815841],['2010-May-1',-2.35114596070273],['2010-Jun-1',-2.16741655722621],['2010-Jul-1',-2.1603320516864],['2010-Aug-1',-2.12926800663803]];
+    s4=[['2008-Jan-1',0.8],['2008-Feb-1',4.35],['2008-Mar-1',9.63],['2008-Apr-1',16.7],['2008-May-1',25.12],['2008-Jun-1',36.31],['2008-Jul-1',42.97],['2008-Aug-1',49.63],['2008-Sep-1',62.96],['2008-Oct-1',80.09],['2008-Nov-1',95.52],['2008-Dec-1',112.83],['2009-Jan-1',137.44],['2009-Feb-1',162.15],['2009-Mar-1',186.43],['2009-Apr-1',212.7],['2009-May-1',240.44],['2009-Jun-1',264.58],['2009-Jul-1',283.27],['2009-Aug-1',302.23],['2009-Sep-1',325.63],['2009-Oct-1',346.43],['2009-Nov-1',365.15],['2009-Dec-1',383.26],['2010-Jan-1',396.9],['2010-Feb-1',408.04],['2010-Mar-1',412]];
+    s5=[['2008-Jan-1',0],['2008-Feb-1',0],['2008-Mar-1',0],['2008-Apr-1',0],['2008-May-1',0.7932446],['2008-Jun-1',1.58415209999431],['2008-Jul-1',3.70325261811882],['2008-Aug-1',6.34668152400494],['2008-Sep-1',7.99703209789767],['2008-Oct-1',10.8096321571569],['2008-Nov-1',13.8924201379789],['2008-Dec-1',15.8950381543046],['2009-Jan-1',24.2590852876044],['2009-Feb-1',30.2369826043764],['2009-Mar-1',41.7333328229845],['2009-Apr-1',52.2957031415845],['2009-May-1',61.8532144477167],['2009-Jun-1',71.5565972489377],['2009-Jul-1',82.1969223],['2009-Aug-1',94.7998192],['2009-Sep-1',107.1699039],['2009-Oct-1',118.76],['2009-Nov-1',124.23],['2009-Dec-1',137.44],['2010-Jan-1',160.63],['2010-Feb-1',185.5],['2010-Mar-1',210.93],['2010-Apr-1',236.7],['2010-May-1',262.42],['2010-Jun-1',286.83],['2010-Jul-1',303.03],['2010-Aug-1',318.65],['2010-Sep-1',342.18],['2010-Oct-1',365.91],['2010-Nov-1',389.34],['2010-Dec-1',412]];
+    s6=[['2008-Jan-1',0],['2008-Feb-1',0],['2008-Mar-1',0],['2008-Apr-1',0],['2008-May-1',0.7932446],['2008-Jun-1',1.58415209999431],['2008-Jul-1',3.70325261811882],['2008-Aug-1',6.34668152400494],['2008-Sep-1',7.99703209789767],['2008-Oct-1',10.8096321571569],['2008-Nov-1',13.8924201379789],['2008-Dec-1',15.8950381543046],['2009-Jan-1',24.2590852876044],['2009-Feb-1',30.2369826043764],['2009-Mar-1',41.7333328229845],['2009-Apr-1',52.2957031415845],['2009-May-1',61.8532144477167],['2009-Jun-1',71.5565972489377],['2009-Jul-1',82.1969223],['2009-Aug-1',94.7998192],['2009-Sep-1',107.1699039],['2009-Oct-1',118.76],['2009-Nov-1',129.9885],['2009-Dec-1',149.7],['2010-Jan-1',170.8395],['2010-Feb-1',192.455],['2010-Mar-1',214.3595],['2010-Apr-1',236.2215],['2010-May-1',256.97],['2010-Jun-1',270.74],['2010-Jul-1',284.017],['2010-Aug-1',304.0175],['2010-Sep-1',324.188],['2010-Oct-1',344.1035],['2010-Nov-1',363.3645],['2010-Dec-1',378.7645],['2011-Jan-1',392.0045],['2011-Feb-1',404.0045],['2011-Mar-1',412.0045]];    s8 = [['2010-Apr-1', 0.49], ['2010-May-1', 0.52], ['2010-Jun-1', 0.56], ['2010-Jul-1', 0.61], ['2010-Aug-1', 0.65]];
+    s7 = [['2008-Jan-1',0],['2008-Feb-1',0],['2008-Mar-1',0],['2008-Apr-1',0],['2008-May-1',0.0609708737864078],['2008-Jun-1',0.0881310679611651],['2008-Jul-1',0.104296116504854],['2008-Aug-1',0.120461165048544],['2008-Sep-1',0.152815533980583],['2008-Oct-1',0.194393203883495],['2008-Nov-1',0.231844660194175],['2008-Dec-1',0.273859223300971],['2009-Jan-1',0.333592233009709],['2009-Feb-1',0.393567961165049],['2009-Mar-1',0.4525],['2009-Apr-1',0.51626213592233],['2009-May-1',0.583592233009709],['2009-Jun-1',0.642184466019417],['2009-Jul-1',0.68754854368932],['2009-Aug-1',0.733567961165049],['2009-Sep-1',0.790364077669903],['2009-Oct-1',0.840849514563107],['2009-Nov-1',0.88628640776699],['2009-Dec-1',0.930242718446602],['2010-Jan-1',0.963349514563107],['2010-Feb-1',0.990388349514563],['2010-Mar-1',1],['2010-Apr-1',1.03059306740014],['2010-May-1',1.03153666529235],['2010-Jun-1',1.03788119533742],['2010-Jul-1',1.04222014611368],['2010-Aug-1',1.04138083296906]];
+    s8 = [['2008-Jan-1',0],['2008-Feb-1',0],['2008-Mar-1',0],['2008-Apr-1',0],['2008-May-1',0.00192535097087379],['2008-Jun-1',0.00384502936891823],['2008-Jul-1',0.00898847722844374],['2008-Aug-1',0.0154045668058372],['2008-Sep-1',0.0194102720822759],['2008-Oct-1',0.0262369712552352],['2008-Nov-1',0.0337194663543177],['2008-Dec-1',0.0385801896949141],['2009-Jan-1',0.0588812749699136],['2009-Feb-1',0.0733907344766418],['2009-Mar-1',0.101294497143166],['2009-Apr-1',0.126931318304817],['2009-May-1',0.150129161280866],['2009-Jun-1',0.173681061283829],['2009-Jul-1',0.199507092961165],['2009-Aug-1',0.230096648543689],['2009-Sep-1',0.260121125970874],['2009-Oct-1',0.288358788106796],['2009-Nov-1',0.301653420145631],['2009-Dec-1',0.324782772815534],['2010-Jan-1',0.359570874757282],['2010-Feb-1',0.399135625970874],['2010-Mar-1',0.439352730582524],['2010-Apr-1',0.49],['2010-May-1',0.52],['2010-Jun-1',0.56],['2010-Jul-1',0.61],['2010-Aug-1',0.65]];
+    plot1 = $.jqplot('chart-1',[s1,s2],{
+        grid:{
+            borderWidth:0,
+            shadow:false,
+            backgroundColor: '#FFFFFF'
+        },
+        highlighter:{
+            sizeAdjust: 2,
+            tooltipLocation: 'n',
+            bringSeriesToFront: true,
+            formatString: '<table class="jqplot_highlighter"><tr><td>Month</td><td>: %s</td></tr><tr><td>Index</td><td>: %s</td></tr></table>',
+            useAxesFormatters: true
+        },        
+        axesDefaults:{
+            pad: 1.5,
+            rendererOptions:{
+                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                labelOptions:{
+                    enableFontSupport: true,
+                    fontFamily: 'Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif',
+                    fontSize: '0.9em'
+                }
+            }
+        },
+        axes: {
+            xaxis:{
+                renderer: $.jqplot.DateAxisRenderer,
+                tickOptions: {
+                    showMark: false,
+                    formatString: '%b-%y',
+                    showGridline: false
+                }
+            },
+            yaxis:{
+                min: -15,
+                max: 15,
+                tickOptions:{
+                    formatString: '%.1f',
+                    showGridline: true
+                },
+                label:'Current Efficiency / Required Efficiency'
+            }
+        },
+        series:[
+            { pointLabels:{show:false}, markerOptions: { style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+            { pointLabels:{show:false}, markerOptions: { style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
+        ],
+        seriesColors: ["#006CC6", "#FF9000"],
+        legend: {
+            renderer: $.jqplot.EnhancedLegendRenderer,
+            show: true,
+            showSwatches: true,
+            labels: ['Budget', 'Re Estimate'],
+            rendererOptions: {
+                numberRows: 1
+            },
+            placement: 'outside',
+            location: 's',
+            marginTop: '40px',
+            seriesToggle: true
+        },
+        cursor:{
+            show:true,
+            zoom:true,
+            showTooltip:false
+        }
+    });
+    plot2 = $.jqplot('chart-2',[s4,s5,s6],{
+        grid:{
+            borderWidth:0,
+            shadow: false,
+            backgroundColor: '#FFFFFF'
+        },
+        highlighter:{
+            sizeAdjust: 2,
+            tooltipLocation: 'n',
+            bringSeriesToFront: true,
+            formatString: '<table class="jqplot_highlighter"><tr><td>Month</td><td>: %s</td></tr><tr><td>Cost</td><td>:INR %s Cr</td></tr></table>',
+            useAxesFormatters: true
+        },        
+        axesDefaults:{
+            pad: 1.5,
+            rendererOptions:{
+                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                labelOptions:{
+                    enableFontSupport: true,
+                    fontFamily: 'Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif',
+                    fontSize: '0.9em'
+                }
+            }
+        },
+        axes: {
+            xaxis:{
+                renderer: $.jqplot.DateAxisRenderer,
+                tickInterval: '6 months',
+                tickOptions: {
+                    showMark: false,
+                    formatString: '%b-%y',
+                    showGridline: false
+                }
+            },
+            yaxis:{
+                renderer:$.jqplot.LogAxisRenderer,
+                min: 0,
+                max: 450,
+                tickOptions:{
+                    formatString: '%.1f',
+                    showGridline: true
+                },
+                label: 'INR In Crores'
+            }
+        },
+        series: [
+        { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+        { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+        { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+        {neighborThreshold: -1}
+        ],
+        seriesColors: ["#FF9000", "#006CC6", "#00BD39"],
+        legend: {
+            renderer: $.jqplot.EnhancedLegendRenderer,
+            show: true,
+            showSwatches: true,
+            labels: ['PV Cum', 'LRE Site', 'LRE PMC'],
+            rendererOptions: {
+                numberRows: 1
+            },
+            placement: 'outside',
+            location: 's',
+            marginTop: '40px'
+        },
+        cursor:{
+            show:true,
+            zoom:true,
+            showTooltip:false
+        }
+    });
+    plot3 = $.jqplot('chart-3', [s7, s8], {
+        grid:{
+            borderWidth:0,
+            shadow: false,
+            backgroundColor: '#FFFFFF'
+        },
+        highlighter:{
+            sizeAdjust: 2,
+            tooltipLocation: 'n',
+            bringSeriesToFront: true,
+            formatString: '<table class="jqplot_highlighter"><tr><td>Month</td><td>: %s</td></tr><tr><td>Index</td><td>: %s</td></tr></table>',
+            useAxesFormatters: true
+        },
+        axesDefaults:{
+            pad: 1.5,
+            rendererOptions:{
+                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                labelOptions:{
+                    enableFontSupport: true,
+                    fontFamily: 'Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif',
+                    fontSize: '0.9em'
+                }
+            }
+        },
+        axes: {
+            xaxis: {
+                renderer: $.jqplot.DateAxisRenderer,
+                tickOptions: {
+                    formatString: '%b-%y',
+                    showGridline: false,
+                    showMark: false
+                }
+            },
+            yaxis: {
+                min: -0.5,
+                max: 1.5,
+                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                label: 'Performance Index',
+                tickOptions: {
+                    formatString: '%.2f',
+                    showGridline: true
+                }
+            }
+        },
+        series: [
+        { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} },
+        { pointLabels:{show:false}, markerOptions: { lineWidth: 1, style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3} }
+        ],
+        seriesColors: ["#006CC6","#FF9000"],
+        cursor:{
+            show:true,
+            zoom:true,
+            showTooltip:false
+        },
+        legend: {
+            renderer: $.jqplot.EnhancedLegendRenderer,
+            show: true,
+            showSwatches: true,
+            labels: ['Cost Performance', 'Schedule Performance'],
+            rendererOptions: {
+                numberRows: 1
+            },
+            placement: 'outside',
+            location: 's',
+            marginTop: '40px'
+        }
+    });
+</script>
+</body>
+
+</html>
