@@ -35,12 +35,10 @@
     <div class="header-container">
     </div>
     <div class="container">
-        <h1>
-            Project Dashboard
-        </h1>
         <div class="report-container-2by3">
             <h2>
-                Milestone %Completion Vs Planed</h2>
+                Planned Vs Billed (In lakhs)
+            </h2>
             <div id="chart-3" style="margin: 10px 30px 40px 10px;">
             </div>
         </div>
@@ -49,10 +47,12 @@
     </div>
     <script type="text/javascript" language="javascript">
         $.jqplot.config.enablePlugins = true;
-        planned = [[43693314.8421739, "Feb-11"], [27578783.7566964, "Mar-11"], [25816588.5815804, "Apr-11"], [27413572.6541112, "May-11"], [34404410.9051915, "Jun-11"], [32036496.3506134, "Jul-11"], [27039628.1925075, "Aug-11"], [30407740.2148148, "Sep-11"], [33110776.2579068, "Oct-11"], [37967756.0320338, "Nov-11"], [42235395.5715669, "Dec-11"], [54839284.566581, "Jan-12"], [44525121.6583873, "Feb-12"], [37519315.8871776, "Mar-12"], [27530828.3636918, "Apr-12"], [43108895.8473317, "May-12"], [33378100.8770395, "Jun-12"], [51432358.4621394, "Jul-12"], [62909851.0532552, "Aug-12"], [61745813.5043433, "Sep-12"], [55678777.363081, "Oct-12"], [37973032.2245876, "Nov-12"], [31679549.2121741, "Dec-12"], [13135077.8828801, "Jan-13"], [20515658.52875, "Feb-13"], [21007387.34625, "Mar-13"], [28686539.91, "Apr-13"], [27880785.795, "May-13"], [15277574.07, "Jun-13"], [13645665.84, "Jul-13"], [9270695.265, "Aug-13"], [6006878.805, "Sep-13"], [6822832.92, "Oct-13"], [8425761.15, "Nov-13"], [8435421.15, "Dec-13"], [8435421.15, "Jan-14"], [8386041.15, "Feb-14"], [8295861.15, "Mar-14"]];
-        completed = [[13407998.9339289, "Feb-11"], [13407998.9339289, "Mar-11"], [13407998.9339289, "Apr-11"], [13407998.9339289, "May-11"], [13407998.9339289, "Jun-11"], [13407998.9339289, "Jul-11"], [13407998.9339289, "Aug-11"], [13407998.9339289, "Sep-11"], [13407998.9339289, "Oct-11"], [13407998.9339289, "Nov-11"], [13407998.9339289, "Dec-11"], [13407998.9339289, "Jan-12"], [13407998.9339289, "Feb-12"], [13407998.9339289, "Mar-12"], [13407998.9339289, "Apr-12"], [13407998.9339289, "May-12"], [13407998.9339289, "Jun-12"], [13407998.9339289, "Jul-12"], [13407998.9339289, "Aug-12"], [13407998.9339289, "Sep-12"], [13407998.9339289, "Oct-12"], [13407998.9339289, "Nov-12"], [13407998.9339289, "Dec-12"], [13407998.9339289, "Jan-13"], [13407998.9339289, "Feb-13"], [13407998.9339289, "Mar-13"], [13407998.9339289, "Apr-13"], [13407998.9339289, "May-13"], [13407998.9339289, "Jun-13"], [13407998.9339289, "Jul-13"], [3407998.9339289, "Aug-13"], [3407998.9339289, "Sep-13"], [3407998.9339289, "Oct-13"], [3407998.9339289, "Nov-13"], [3407998.9339289, "Dec-13"], [3407998.9339289, "Jan-14"], [2407998.9339289, "Feb-14"], [2407998.9339289, "Mar-14"]];
-        percentage = [[42119167.2232792, "Feb-11"], [29157078.3716292, "Mar-11"], [34587938.2523989, "Apr-11"], [49583922.5456421, "May-11"], [47002298.5337129, "Jun-11"], [49729598.9072615, "Jul-11"], [49738257.829826, "Aug-11"], [50935416.4127547, "Sep-11"], [63567525.483036, "Oct-11"], [70144007.6337686, "Nov-11"], [76533725.467597, "Dec-11"], [64895987.4155855, "Jan-12"], [66810874.6922334, "Feb-12"], [49747584.5914977, "Mar-12"], [44212620.715483, "Apr-12"], [45265224.7808388, "May-12"], [21995932.5035515, "Jun-12"], [62137857.8619756, "Jul-12"], [37098603.9282241, "Aug-12"], [24539478.0785457, "Sep-12"], [29190723.0006176, "Oct-12"], [22967085.4494119, "Nov-12"], [29658917.7783584, "Dec-12"], [61744366.0870606, "Jan-13"], [24557574.5209374, "Feb-13"], [26595302.5744844, "Mar-13"], [29214635.4859544, "Apr-13"], [23183086.1387815, "May-13"], [13871121.6109771, "Jun-13"], [17307889.5390515, "Jul-13"], [37837784.1364773, "Aug-13"], [17903888.2932704, "Sep-13"], [19126715.7564717, "Oct-13"], [19552472.9474727, "Nov-13"], [23842986.5173344, "Dec-13"], [14993317.8175932, "Jan-14"], [15324078.1599802, "Feb-14"], [22043138.4031308, "Mar-14"]];
-        plot6 = $.jqplot('chart-3', [planned, completed, percentage], {
+        planned = [[1, 437], [2, 276], [3, 258], [4, 274], [5, 344], [6, 320], [7, 270], [8, 304], [9, 331], [10, 380], [11, 422], [12, 548], [13, 445], [14, 375], [15, 275], [16, 431], [17, 334], [18, 514], [19, 629], [20, 617], [21, 557], [22, 380], [23, 317], [24, 131], [25, 205], [26, 210], [27, 287], [28, 279], [29, 153], [30, 136], [31, 93], [32, 60], [33, 68], [34, 84], [35, 84], [36, 84], [37, 84], [38, 83]];
+        completed = [[1, 134], [2, 134], [3, 134], [4, 134], [5, 134], [6, 134], [7, 134], [8, 134], [9, 134], [10, 134], [11, 134], [12, 134], [13, 134], [14, 134], [15, 134], [16, 134], [17, 134], [18, 134], [19, 134], [20, 134], [21, 134], [22, 134], [23, 134], [24, 134], [25, 134], [26, 134], [27, 134], [28, 134], [29, 134], [30, 134], [31, 34], [32, 34], [33, 34], [34, 34], [35, 34], [36, 34], [37, 24], [38, 24]];
+        percentage = [[1, 421], [2, 292], [3, 346], [4, 496], [5, 470], [6, 497], [7, 497], [8, 509], [9, 636], [10, 701], [11, 765], [12, 649], [13, 668], [14, 497], [15, 442], [16, 453], [17, 220], [18, 621], [19, 371], [20, 245], [21, 292], [22, 230], [23, 297], [24, 617], [25, 246], [26, 266], [27, 292], [28, 232], [29, 139], [30, 173], [31, 378], [32, 179], [33, 191], [34, 196], [35, 238], [36, 150], [37, 153], [38, 220]];
+        cuPlanned = [[1, 3679], [2, 3984], [3, 4346], [4, 4865], [5, 5358], [6, 5878], [7, 6399], [8, 6933], [9, 7598], [10, 8333], [11, 9134], [12, 9814], [13, 10513], [14, 11034], [15, 11497], [16, 11971], [17, 12201], [18, 12852], [19, 13241], [20, 13497], [21, 13803], [22, 14044], [23, 14354], [24, 15001], [25, 15258], [26, 15536], [27, 15842], [28, 16085], [29, 16230], [30, 16411], [31, 16808], [32, 16995], [33, 17195], [34, 17400], [35, 17650], [36, 17807], [37, 17967], [38, 18198]];
+        cuBilled = [[1, 3659], [2, 3951], [3, 4296], [4, 4792], [5, 5262], [6, 5760], [7, 6257], [8, 6766], [9, 7402], [10, 8103], [11, 8869], [12, 9518], [13, 10186], [14, 10683], [15, 11125], [16, 11578], [17, 11798], [18, 12419], [19, 12790], [20, 13036], [21, 13328], [22, 13557], [23, 13854], [24, 14471], [25, 14717], [26, 14983], [27, 15275], [28, 15507], [29, 15646], [30, 15819], [31, 16197], [32, 16376], [33, 16567], [34, 16763], [35, 17001], [36, 17151], [37, 17304], [38, 17525]];
+        plot6 = $.jqplot('chart-3', [planned, completed, percentage, cuPlanned, cuBilled], {
             grid: {
                 borderWidth: 0,
                 shadow: false,
@@ -72,7 +72,7 @@
                 },
                 placement: 'outside',
                 location: 's',
-                marginTop: '40px'
+                marginTop: '60px'
             },
             axesDefaults: {
                 pad: 1.5,
@@ -88,108 +88,115 @@
             },
             seriesDefaults: {},
             series: [
-            {
-                label: 'Planned',
-                renderer: $.jqplot.BarRenderer,
-                pointLabels: {
-                    show: false,
-                    hideZeros: false,
-                    xpadding: 5
-                    //formatString: '%s'
+                {
+                    label: 'Planned',
+                    renderer: $.jqplot.BarRenderer,
+                    pointLabels: {
+                        show: false,
+                        hideZeros: false,
+                        xpadding: 5,
+                        formatString: '%s'
+                    },
+                    rendererOptions: {
+                        barDirection: 'vertical',
+                        barWidth: 15,
+                        barPadding: 8,
+                        barMargin: 10,
+                        shadow: false,
+                        highlightMouseOver: false
+                    }
                 },
-                rendererOptions: {
-                    barDirection: 'vertical',
-                    barWidth: 10,
-                    barPadding: 8,
-                    barMargin: 10,
-                    shadow: false,
-                    highlightMouseOver: false
-                }
-            },
-            {
-                label: 'Completed',
-                renderer: $.jqplot.BarRenderer,
-                pointLabels: {
-                    show: false,
-                    hideZeros: false,
-                    xpadding: 5
-                    //formatString: '%s'
+                {
+                    label: 'Completed',
+                    renderer: $.jqplot.BarRenderer,
+                    pointLabels: {
+                        show: false,
+                        hideZeros: false,
+                        xpadding: 5,
+                        formatString: '%s'
+                    },
+                    rendererOptions: {
+                        barDirection: 'vertical',
+                        barWidth: 15,
+                        barPadding: 8,
+                        barMargin: 10,
+                        shadow: false,
+                        highlightMouseOver: false
+                    }
                 },
-                rendererOptions: {
-                    barWidth: 10,
-                    barDirection: 'vertical',
-                    barPadding: 8,
-                    barMargin: 10,
-                    shadow: false,
-                    highlightMouseOver: false
+                {
+                    label: 'Completed %',
+                    renderer: $.jqplot.BarRenderer,
+                    disableStack: true,
+                    pointLabels: {
+                        show: false,
+                        hideZeros: false,
+                        xpadding: 5,
+                        formatString: '%s'
+                    },
+                    rendererOptions: {
+                        barDirection: 'vertical',
+                        barWidth: 5,
+                        barPadding: -5,
+                        barMargin: -5,
+                        shadow: false,
+                        highlightMouseOver: false
+                    }
+
+                },
+                {
+                    label: 'Cumulative Planned',
+                    renderer: $.jqplot.LineRenderer,
+                    yaxis: 'y2axis',
+                    pointLabels: { show: false },
+                    markerOptions: { style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3 },
+                    rendererOptions: {}
+                },
+                {
+                    label: 'Cumulative Billed',
+                    renderer: $.jqplot.LineRenderer,
+                    yaxis: 'y2axis',
+                    pointLabels: { show: false },
+                    markerOptions: { style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3 },
+                    rendererOptions: {}
                 }
-
-            },
-            /**            {
-            label: 'Completed %',
-            renderer: $.jqplot.LineRenderer,
-            yaxis: 'y2axis',
-            pointLabels: { show: false },
-            markerOptions: { style: 'jumpCircle', size: 8, shadow: true, shadowAngle: 45, shadowOffset: 1, shadowDepth: 3 },
-            rendererOptions: {
-            }
-            **/
-            {
-            label: 'Completed %',
-            renderer: $.jqplot.BarRenderer,
-            disableStack: true,
-            pointLabels: {
-                show: false,
-                hideZeros: false,
-                xpadding: 0
-                //formatString: '%s'
-            },
-            rendererOptions: {
-                barWidth: 5,
-                barDirection: 'vertical',
-                barPadding: -5,
-                barMargin: -5,
-                shadow: false,
-                highlightMouseOver: false
-            }
-
-        }
         ],
-        axes: {
-            xaxis: {
-                renderer: $.jqplot.CategoryAxisRenderer,
-                tickOptions: {
-                    showGridline: false,
-                    showMark: false,
-                    formatString: '%.0f'
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer,
+                    ticks: ['Feb-11', 'Mar-11', 'Apr-11', 'May-11', 'Jun-11', 'Jul-11', 'Aug-11', 'Sep-11', 'Oct-11', 'Nov-11', 'Dec-11', 'Jan-12', 'Feb-12', 'Mar-12', 'Apr-12', 'May-12', 'Jun-12', 'Jul-12', 'Aug-12', 'Sep-12', 'Oct-12', 'Nov-12', 'Dec-12', 'Jan-13', 'Feb-13', 'Mar-13', 'Apr-13', 'May-13', 'Jun-13', 'Jul-13', 'Aug-13', 'Sep-13', 'Oct-13', 'Nov-13', 'Dec-13', 'Jan-14', 'Feb-14', 'Mar-14'],
+                    tickOptions: {
+                        showGridline: false,
+                        showMark: false,
+                        angle: -45
+                    }
+                },
+                yaxis: {
+                    min: 0,
+                    max: 1000,
+                    numberTicks: 6,
+                    tickInterval: 200,
+                    tickOptions: {
+                        showGridline: true,
+                        showMarker: false,
+                        formatString: '%.0f'
+                    }
+                },
+                y2axis: {
+                    min: 0,
+                    max: 50000,
+                    numberTicks: 6,
+                    tickInterval: 10000,
+                    tickOptions: { formatString: '%.0f', showGridline: false }
                 }
             },
-            yaxis: {
-                min: 10000000,
-                max: 100000000,
-                numberTicks: 10,
-                tickInterval: 10000000,
-                tickOptions: {
-                    showGridline: true,
-                    showMarker: false,
-                    formatString: '%.0f'
-                }
-            }/**,
-            y2axis: {
-                min: 0,
-                max: 120,
-                numberTicks: 7,
-                tickInterval: 20,
-                tickOptions: { formatString: '%.0f%', showGridline: false }
-            }**/
-        },
-        cursor: {
-            show: true,
-            style: 'pointer',
-            showTooltip: false,
-            zoom: false
-        }
-    });
+            cursor: {
+                show: false,
+                //style: 'pointer',
+                showTooltip: true
+                //zoom: false
+            }
+        });
     </script>
 </body>
 </html>
